@@ -449,7 +449,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox fotoPictureBox;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.BindingSource listadeCategoriasBindingSource;
+        private System.Windows.Forms.BindingSource listaCategoriasBindingSource;
         private System.Windows.Forms.TextBox categoriaIdTextBox;
         private System.Windows.Forms.PictureBox fotoPictureBox1;
         private System.Windows.Forms.TextBox descripcionTextBox1;

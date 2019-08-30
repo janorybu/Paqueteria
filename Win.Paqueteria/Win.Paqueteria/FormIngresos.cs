@@ -27,7 +27,7 @@ namespace Win.Paqueteria
             listaIngresosBindingSource.DataSource = _ingresos.ObtenerIngresos();
 
             _categorias = new CategoriasBL();
-            listadeCategoriasBindingSource.DataSource = _categorias.ObtenerCategorias();
+            listaCategoriasBindingSource.DataSource = _categorias.ObtenerCategorias();
 
            
 
