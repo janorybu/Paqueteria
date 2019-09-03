@@ -129,13 +129,13 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\BL.Entregas.Categoria.datasource" />
     <None Include="Properties\DataSources\BL.Entregas.CategoriasBL.datasource" />
-    <None Include="Properties\DataSources\BL.Entregas.Clientes.datasource" />
     <None Include="Properties\DataSources\BL.Entregas.ClientesBL.datasource" />
     <None Include="Properties\DataSources\BL.Entregas.Entregas.datasource" />
     <None Include="Properties\DataSources\BL.Entregas.EntregasBL.datasource" />
     <None Include="Properties\DataSources\BL.Entregas.Ingreso.datasource" />
     <None Include="Properties\DataSources\BL.Entregas.IngresosBL.datasource" />
     <None Include="Properties\DataSources\BL.Entregas.SegridadBL.datasource" />
+    <None Include="Properties\DataSources\BL.Entregas.TiposBL.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

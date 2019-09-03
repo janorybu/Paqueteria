@@ -38,7 +38,7 @@ namespace BL.Entregas
                 return resultado;
             }
 
-            _contexto.SaveChanges();
+          //  _contexto.SaveChanges();
             resultado.Exitoso = true;
             return resultado;
         }
@@ -85,9 +85,18 @@ namespace BL.Entregas
                 resultado.Mensaje = "El codigo debe ser mayor que cero";
                 resultado.Exitoso = false;
             }
+            
+            if (ingreso.TipoId == 0)
+            {
+                resultado.Mensaje = "Seleccione un tipo";
+                resultado.Exitoso = false;
+            }
 
-
-
+            if (ingreso.CategoriaId == 0)
+            {
+                resultado.Mensaje = "selecione una categoria";
+                resultado.Exitoso = false; 
+            }
             return resultado;
         
             
@@ -104,8 +113,18 @@ namespace BL.Entregas
             public int Codigo { get; set; }
             public int CategoriaId { get; set; }
             public Categoria Categoria { get; set; }
+            public int TipoId { get; set; }
+            public Tipo Tipo { get; set; }
             public byte[] Foto { get; set; }
             public bool Activo { get; set; }
+
+
+
+        public Ingreso()
+        {
+            Activo = true;
+        }
+
             
         }
         public class Resultado

@@ -36,6 +36,7 @@
             System.Windows.Forms.Label activoLabel;
             System.Windows.Forms.Label codigoLabel;
             System.Windows.Forms.Label categoriaIdLabel;
+            System.Windows.Forms.Label tipoIdLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormIngresos));
             this.listaIngresosBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.listaIngresosBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -64,6 +65,8 @@
             this.Agregar = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.listaCategoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.listaTiposBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tipoIdComboBox = new System.Windows.Forms.ComboBox();
             precioLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
@@ -71,17 +74,19 @@
             activoLabel = new System.Windows.Forms.Label();
             codigoLabel = new System.Windows.Forms.Label();
             categoriaIdLabel = new System.Windows.Forms.Label();
+            tipoIdLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.listaIngresosBindingNavigator)).BeginInit();
             this.listaIngresosBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listaIngresosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaCategoriasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaTiposBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // precioLabel
             // 
             precioLabel.AutoSize = true;
-            precioLabel.Location = new System.Drawing.Point(25, 183);
+            precioLabel.Location = new System.Drawing.Point(25, 204);
             precioLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             precioLabel.Name = "precioLabel";
             precioLabel.Size = new System.Drawing.Size(40, 13);
@@ -121,7 +126,7 @@
             // activoLabel
             // 
             activoLabel.AutoSize = true;
-            activoLabel.Location = new System.Drawing.Point(25, 250);
+            activoLabel.Location = new System.Drawing.Point(25, 271);
             activoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             activoLabel.Name = "activoLabel";
             activoLabel.Size = new System.Drawing.Size(40, 13);
@@ -131,7 +136,7 @@
             // codigoLabel
             // 
             codigoLabel.AutoSize = true;
-            codigoLabel.Location = new System.Drawing.Point(25, 216);
+            codigoLabel.Location = new System.Drawing.Point(25, 237);
             codigoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             codigoLabel.Name = "codigoLabel";
             codigoLabel.Size = new System.Drawing.Size(43, 13);
@@ -141,11 +146,20 @@
             // categoriaIdLabel
             // 
             categoriaIdLabel.AutoSize = true;
-            categoriaIdLabel.Location = new System.Drawing.Point(24, 152);
+            categoriaIdLabel.Location = new System.Drawing.Point(24, 173);
             categoriaIdLabel.Name = "categoriaIdLabel";
-            categoriaIdLabel.Size = new System.Drawing.Size(67, 13);
+            categoriaIdLabel.Size = new System.Drawing.Size(55, 13);
             categoriaIdLabel.TabIndex = 23;
-            categoriaIdLabel.Text = "Categoria Id:";
+            categoriaIdLabel.Text = "Categoria:";
+            // 
+            // tipoIdLabel
+            // 
+            tipoIdLabel.AutoSize = true;
+            tipoIdLabel.Location = new System.Drawing.Point(25, 149);
+            tipoIdLabel.Name = "tipoIdLabel";
+            tipoIdLabel.Size = new System.Drawing.Size(31, 13);
+            tipoIdLabel.TabIndex = 24;
+            tipoIdLabel.Text = "Tipo:";
             // 
             // listaIngresosBindingNavigator
             // 
@@ -175,7 +189,7 @@
             this.listaIngresosBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listaIngresosBindingNavigator.Name = "listaIngresosBindingNavigator";
             this.listaIngresosBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listaIngresosBindingNavigator.Size = new System.Drawing.Size(747, 27);
+            this.listaIngresosBindingNavigator.Size = new System.Drawing.Size(658, 27);
             this.listaIngresosBindingNavigator.TabIndex = 0;
             this.listaIngresosBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -313,7 +327,7 @@
             // precioTextBox
             // 
             this.precioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaIngresosBindingSource, "Precio", true));
-            this.precioTextBox.Location = new System.Drawing.Point(94, 181);
+            this.precioTextBox.Location = new System.Drawing.Point(94, 202);
             this.precioTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.precioTextBox.Name = "precioTextBox";
             this.precioTextBox.Size = new System.Drawing.Size(224, 20);
@@ -350,7 +364,7 @@
             // activoCheckBox
             // 
             this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaIngresosBindingSource, "Activo", true));
-            this.activoCheckBox.Location = new System.Drawing.Point(94, 246);
+            this.activoCheckBox.Location = new System.Drawing.Point(94, 267);
             this.activoCheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.activoCheckBox.Name = "activoCheckBox";
             this.activoCheckBox.Size = new System.Drawing.Size(78, 20);
@@ -360,7 +374,7 @@
             // codigoTextBox
             // 
             this.codigoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaIngresosBindingSource, "Codigo", true));
-            this.codigoTextBox.Location = new System.Drawing.Point(94, 214);
+            this.codigoTextBox.Location = new System.Drawing.Point(94, 235);
             this.codigoTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.codigoTextBox.Name = "codigoTextBox";
             this.codigoTextBox.Size = new System.Drawing.Size(224, 20);
@@ -378,13 +392,13 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.listaCategoriasBindingSource, "Id", true));
             this.comboBox1.DataSource = this.listaCategoriasBindingSource;
             this.comboBox1.DisplayMember = "Descripcion";
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(107, 152);
+            this.comboBox1.Location = new System.Drawing.Point(94, 173);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(211, 21);
+            this.comboBox1.Size = new System.Drawing.Size(224, 21);
             this.comboBox1.TabIndex = 24;
             this.comboBox1.ValueMember = "Id";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
@@ -393,11 +407,29 @@
             // 
             this.listaCategoriasBindingSource.DataSource = typeof(BL.Entregas.Categoria);
             // 
+            // listaTiposBindingSource
+            // 
+            this.listaTiposBindingSource.DataSource = typeof(BL.Entregas.Tipo);
+            // 
+            // tipoIdComboBox
+            // 
+            this.tipoIdComboBox.DataSource = this.listaTiposBindingSource;
+            this.tipoIdComboBox.DisplayMember = "Descripcion";
+            this.tipoIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tipoIdComboBox.FormattingEnabled = true;
+            this.tipoIdComboBox.Location = new System.Drawing.Point(94, 146);
+            this.tipoIdComboBox.Name = "tipoIdComboBox";
+            this.tipoIdComboBox.Size = new System.Drawing.Size(224, 21);
+            this.tipoIdComboBox.TabIndex = 25;
+            this.tipoIdComboBox.ValueMember = "Id";
+            // 
             // FormIngresos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(747, 564);
+            this.ClientSize = new System.Drawing.Size(658, 346);
+            this.Controls.Add(tipoIdLabel);
+            this.Controls.Add(this.tipoIdComboBox);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(categoriaIdLabel);
             this.Controls.Add(this.fotoPictureBox);
@@ -418,12 +450,14 @@
             this.Controls.Add(this.listaIngresosBindingNavigator);
             this.Name = "FormIngresos";
             this.Text = "Ingresos";
+            this.Load += new System.EventHandler(this.FormIngresos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.listaIngresosBindingNavigator)).EndInit();
             this.listaIngresosBindingNavigator.ResumeLayout(false);
             this.listaIngresosBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listaIngresosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaCategoriasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaTiposBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -462,6 +496,8 @@
         private System.Windows.Forms.TextBox codigoTextBox;
         private System.Windows.Forms.Button Agregar;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.BindingSource listaCategoriasBindingSource;
+        private System.Windows.Forms.BindingSource listaTiposBindingSource;
+        private System.Windows.Forms.ComboBox tipoIdComboBox;
+        //private System.Windows.Forms.BindingSource listaCategoriasBindingSource;
     }
 }

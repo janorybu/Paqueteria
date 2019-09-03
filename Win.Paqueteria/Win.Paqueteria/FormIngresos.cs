@@ -16,7 +16,8 @@ namespace Win.Paqueteria
     {
         IngresosBL _ingresos;
         CategoriasBL _categorias;
-        ClientesBL _clientes;
+        TiposBL _tiposBL;
+        
         
 
         public FormIngresos()
@@ -28,6 +29,11 @@ namespace Win.Paqueteria
 
             _categorias = new CategoriasBL();
             listaCategoriasBindingSource.DataSource = _categorias.ObtenerCategorias();
+
+            _tiposBL = new TiposBL();
+            listaTiposBindingSource.DataSource = _tiposBL.ObtenerTipos();
+            
+            
 
            
 
@@ -164,6 +170,11 @@ namespace Win.Paqueteria
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void FormIngresos_Load(object sender, EventArgs e)
+        {
+
         }
     }
 
